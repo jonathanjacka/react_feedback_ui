@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 
+import Card from './shared/Card';
+
 function FeedbackItem({data: {rating, text}}) {
     
     return (
-        <div className='card'>
+        <Card>
             <div className="num-display">{rating}</div>
             <div className="text-display">{text}</div>
-        </div>
+        </Card>
     )
 }
 
