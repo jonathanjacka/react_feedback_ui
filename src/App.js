@@ -35,16 +35,19 @@ function App() {
             path='/'
             element={
               <>
-                <FeedbackForm handleAdd={addFeedback} />
-                <FeedbackStats feedback={feedback} />
-                <FeedbackList
-                  feedback={feedback}
-                  handleDelete={deleteFeedBack}
-                />
-                <AboutIconLink />
+                <div className='container'>
+                  <AboutIconLink />
+                  <FeedbackForm handleAdd={addFeedback} />
+                  <FeedbackStats feedback={feedback} />
+                  <FeedbackList
+                    feedback={feedback}
+                    handleDelete={deleteFeedBack}
+                  />
+                </div>
               </>
             }
           ></Route>
+
           <Route path='/about' element={<AboutPage />} />
         </Routes>
       </div>
