@@ -13,6 +13,8 @@ export const FeedbackProvider = ({ children }) => {
     edit: false,
   });
 
+  const [showAboutIcon, setShowAboutIcon] = useState(true);
+
   const addFeedback = (newFeedback) => {
     newFeedback.id = uuidv4();
     setFeedback([newFeedback, ...feedback]);
@@ -31,7 +33,15 @@ export const FeedbackProvider = ({ children }) => {
 
   return (
     <FeedbackContext.Provider
-      value={{ feedback, deleteFeedBack, addFeedback, editFeedback }}
+      value={{
+        showAboutIcon,
+        setShowAboutIcon,
+        feedback,
+        deleteFeedBack,
+        addFeedback,
+        editFeedback,
+        feedbackEdit,
+      }}
     >
       {children}
     </FeedbackContext.Provider>

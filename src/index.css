@@ -31,6 +31,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  position: relative;
 }
 
 .card {
@@ -186,17 +187,13 @@ input:focus {
   color: rebeccapurple;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
 .about-link {
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 10px;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
 .about-link a {
-  color: #fff;
+  color: #a74460;
   cursor: pointer;
 }
 
@@ -210,6 +207,11 @@ input:focus {
 
 .about p {
   margin: 10px 0;
+}
+
+.about a {
+  color: #ff6a95;
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {

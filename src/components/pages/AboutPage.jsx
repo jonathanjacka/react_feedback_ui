@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from '../shared/Card';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import FeedbackContext from '../../context/FeedbackContext';
 
 function AboutPage() {
+
+  const { setShowAboutIcon } = useContext(FeedbackContext);
+
   return (
     <Card>
         <div className="about">
@@ -12,7 +16,7 @@ function AboutPage() {
                 <h1>About this Project:</h1>
             <p>This is an unmaintained practice project using React</p>
             <p>Version: 1.0.0</p>
-            <Link to='/'>Home</Link>
+            <Link to='/' onClick={() => setShowAboutIcon(true)}>Home</Link>
                 </motion.div>
             </AnimatePresence>
 

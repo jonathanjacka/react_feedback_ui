@@ -15,7 +15,7 @@ function FeedbackList() {
       { feedback && feedback.length > 0 ? (
         feedback.map(item => 
           <motion.div key={item.id} initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-            <FeedbackItem key={item.id} item={item} />
+            <FeedbackItem item={item} />
           </motion.div>
         )
       ) : <p>There are no items to display.</p> }

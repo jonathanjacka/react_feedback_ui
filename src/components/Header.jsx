@@ -1,6 +1,8 @@
+import { useContext } from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
-
+import AboutIconLink from './AboutIconLink';
+import FeedbackContext from '../context/FeedbackContext';
 function Header({text, bgColor, textColor}) {
 
     const headerStyles = {
@@ -8,14 +10,16 @@ function Header({text, bgColor, textColor}) {
         color: textColor,
     }
 
+    const { showAboutIcon, setShowAboutIcon } = useContext(FeedbackContext);
+
   return (
     <header style={headerStyles}>
       <div className="container">
-        <Link to='/' style={{textDecoration: 'inherit', color: textColor}}>
-          <h2>{text}</h2>
+        <Link to='/' style={{textDecoration: 'inherit', color: textColor}} onClick={() => setShowAboutIcon(true)}>
+          <h2 >{text}</h2>
         </Link>
-        
       </div>
+      {showAboutIcon && <AboutIconLink />}
     </header>
   )
 }

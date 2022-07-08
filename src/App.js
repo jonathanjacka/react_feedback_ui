@@ -8,7 +8,6 @@ import FeedbackList from './components/FeedbackList';
 import FeedbackStats from './components/FeedbackStats';
 import FeedbackForm from './components/FeedbackForm';
 import AboutPage from './components/pages/AboutPage';
-import AboutIconLink from './components/AboutIconLink';
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
               element={
                 <>
                   <div className='container'>
-                    <AboutIconLink />
                     <FeedbackForm />
                     <FeedbackStats />
                     <FeedbackList />
@@ -30,7 +28,6 @@ function App() {
                 </>
               }
             ></Route>
-
             <Route path='/about' element={<AboutPage />} />
           </Routes>
         </div>
