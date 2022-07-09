@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# React User Feedback UI
+
+Frontend user feedback interface. [From the course React Front to Back 2022](https://www.udemy.com/course/react-front-to-back-2022/) by Brad Traversy.
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
