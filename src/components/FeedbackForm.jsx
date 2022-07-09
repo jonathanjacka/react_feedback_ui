@@ -17,6 +17,8 @@ function FeedbackForm() {
             setBtnDisabled(false);
             setText(feedbackEdit.item.text);
             setRating(feedbackEdit.item.rating);
+        } else if (!feedbackEdit.edit) {
+            setBtnDisabled(true);
         }
     }, [feedbackEdit]);
 
@@ -44,11 +46,11 @@ function FeedbackForm() {
                 rating
             }
             if(feedbackEdit.edit === true) {
-                updateFeedback(feedbackEdit.id, newFeedback);
+                updateFeedback(feedbackEdit.item.id, newFeedback);
             } else {
                 handleAdd(newFeedback);
             }
-            
+            setBtnDisabled(true);
             setText('');
         }
     }
