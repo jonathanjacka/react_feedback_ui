@@ -4,7 +4,7 @@ Frontend user feedback interface. [From the course React Front to Back 2022](htt
 
 ---
 
-A live version of the task - branch _netlify-deploy_ can be viewed [here](bejewelled-biscuit-97cdc5.netlify.app). This deployment uses a basic javascript file to act as a 'database', and therefore will not persist. To have persistence, use project branch _main_ on your local machine.
+A live version of the task - branch _netlify-deploy_ can be viewed [here](https://bejewelled-biscuit-97cdc5.netlify.app/). This deployment uses a basic javascript file to act as a 'database', and therefore will not persist. To have persistence, use project branch _main_ on your local machine.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
